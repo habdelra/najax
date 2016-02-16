@@ -41,8 +41,7 @@
   },
   "keywords": [],
   "dependencies": {
-    "jquery-deferred": "^0.3.0",
-    "lodash": "^3.10.1"
+    "jquery-deferred": "^0.3.0"
   },
   "directories": {
     "test": "test"
