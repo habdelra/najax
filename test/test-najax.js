@@ -251,9 +251,9 @@ describe('timeout', function () {
       .socketDelay(1000)
       .reply(200, 'ok')
     var opts = { timeout: 1, error: false }
-    najax.post('http://www.example.com', opts)
-      .always(function (data, statusText) {
-        expect(statusText).to.eql('timeout')
+    return najax.post('http://www.example.com', opts)
+      .error(function (data, statusText, e) {
+        expect(e.message).to.eql('timeout')
         done()
       })
   })
